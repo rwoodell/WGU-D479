@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
+        <title>Land</title>
+    </head>
+    <body style="margin:0;font-family: 'Segoe UI', sans-serif;">
+        <header>
+            <nav>
+                <h3><a class="logo" href="index.html">DISCOVER TANITI</a></h3>
+                <ul>
+                    <li>
+                        <div class="dropdown">
+                            <button id="navbtn" aria-pressed="false">Attractions &#x1F783;</button>
+                            <div class="dropdown-content" style="line-height:4em;">
+                                <p>> <a href="oceans.html">Ocean and Beaches</a>
+                                <br>> <a href="land.html">Volcano and Rainforests</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button id="navbtn" aria-pressed="false">Entertainment &#x1F783;</button>
+                            <div class="dropdown-content" style="line-height:4em;">
+                                <p>> <a href="restaurants.html">Restaurants</a>
+                                <br>> <a href="activities.html">Activities</a>
+                                <br>> <a href="tours.html">Tours</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="dropdown">
+                            <button id="navbtn" aria-pressed="false">Planning &#x1F783;</button>
+                            <div class="dropdown-content" style="line-height:4em;">
+                                <p>> <a href="booking.html">Booking</a>
+                                <br>> <a href="transport.html">Transportation</a></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="faq.html" class="faq">Travel FAQ</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="landscape" style="background-image:url(images/land/hero.jpg);">
+            <div class ="titlecard">
+                <h1>Natural Wonders</h1>
+            </div>
+        </div>
+        <div class="info-text" style="text-align:left">
+            <p style="font-size:200%"><u>Volcano And Rainforests</u></p>
+            <p>Taniti is home to a diverse, flourishing landscape of plant and animal life. The tropical rainforests span many miles and are perfect for adventurers and explorers. The island also boasts mountainous, rugged terrain for those up to the challenge. Taniti has one volcano, which lies at the heart of the island, and is still active to this day.</p>
+        </div>
+        <div class="list-container">
+            <div class="list-left">
+                <img src="images\land\forest.jpg" style="float:right">
+                <p style="font-size:180%"><br><br>Forests</p>
+                <p>The rainforests of Taniti are home to many unique species of plant and animal life for nature lovers and sightseers alike to explore.</p>
+            </div>
+            <div class="list-right">
+                <img src="images\land\mountains.jpg" style="float:left">
+                <p style="font-size:180%; float:right"><br><br>Mountains</p>
+                <p style="float:right">Tall, forested mountains offer a perfect challenge for mountain climbers, hikers, and sightseers.</p>
+            </div>
+            <div class="list-left">
+                <img src="images\land\volcano.jpg" style="float:right">
+                <p style="font-size:180%"><br><br>Volcano</p>
+                <p>The volcano that shaped the island of Taniti is still active to this day, constantly reshaping the landscape. Climbing the volcano offers a one of a kind sight, especially before dark.</p>
+            </div>
+        </div>
+        <div class="extras-container">
+            <div class="attractions-extras" style="margin:0;margin-right:5%;margin-left:5%">
+                <h2>Ziplining</h2>
+                <hr>
+                <p>There are many ziplines stationed around the rainforests, offering a fast-paced and exciting way to get around the land.</p>
+            </div>
+            <div style="margin:0;text-align:center;margin-right:5%">
+                <img class="attractions-extras-img" src="images\land\zipline.jpg">
+            </div>
+        </div>
+        <footer>
+            <div style="float:right;top:0;width:15%">
+                <p style="font-size:110%;color:white;width:auto"><b>Social Media</b></p>
+                <p style="width:auto">
+                    <a href="#" style="margin-right:5px" class="socials"><img src="images\socials_fb.png" width="15%"></a>
+                    <a href="#" class="socials"><img src="images\socials_ig.png" width="15%"></a>
+                    <a href="#" style="margin-left:5px" class="socials"><img src="images\socials_tw.png" width="15%"></a>
+                </p>
+            </div>
+            <div class="sitemap">
+                <div>
+                    <p style="font-size:110%;color:white"><b>Sitemap</b></p>
+                </div>
+                <div>
+                    <p>Attractions</p>
+                    <p>Entertainment</p>
+                    <p>Planning</p>
+                    <p>FAQ</p>
+                </div>
+                <div style="line-height:22px">
+                    <p>> <a href="oceans.html">Ocean & Beaches</a><br>> <a href="land.html">Volcano & Rainforests</a></p>
+                    <p>> <a href="restaurants.html">Restaurants</a><br>> <a href="activities.html">Activities</a><br>> <a href="tours.html">Tours</a></p>
+                    <p>> <a href="booking.html">Booking</a><br>> <a href="transport.html">Transportation</a></p>
+                    <p>> <a href="faq.html">Travel FAQ</a></p>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script>
+        const btns = document.querySelectorAll("button[id=navbtn]");
+        btns.forEach(btn => {
+                btn.addEventListener('click', event => {
+                    btn.ariaPressed = !JSON.parse(btn.ariaPressed);
+                })
+                btn.addEventListener('blur', event => {
+                    setTimeout(() => {
+                        btn.ariaPressed = "false";
+                    }, 80);
+                })
+        })
+    </script>
+</html>
